@@ -71,7 +71,7 @@ pipeline {
 
         stage('Creazione Client Geco'){
             steps {
-                build job : 'pipelineClient', parameters:[string(name='indirizzoDB', value: "${data}")]
+                build job : 'pipelineJenkins2', parameters:[string(name='indirizzoDB', value: "${data}")]
             }
         }
 
