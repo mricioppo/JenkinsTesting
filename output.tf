@@ -1,8 +1,8 @@
 output "public_ip" {
     description = "Indirizzo pubblico del database"
-    value = try(aws_instance.db.public_ip,"")
+    value = "INDIRIZZO IP FITTIZIO"
 }
 
 locals {
-  myIp = try(aws_instance.db.public_ip,"")
+  myIp = "INDIRIZZO IP FITTIZIO"
 }

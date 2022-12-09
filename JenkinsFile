@@ -62,13 +62,8 @@ pipeline {
             steps {
                 sh "pwd;cd terraform/terraform-database ; terraform apply -input=false tfplan"
                 script {
-                    /*
-                    sh "pwd;cd terraform/terraform-database;"
-                    def ipdb = readFile (file: 'ip.txt')
-                    echo "${ipDB}"
-                    */
                     def prova = writeFile (file: 'zorg.txt', text: "ciaone777")
-                    def data = readFile(file: 'ip.txt')
+                    def data = readFile(file: 'zorg.txt')
                     println(data)
                 }
             }
