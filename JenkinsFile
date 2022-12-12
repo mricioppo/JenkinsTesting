@@ -1,4 +1,3 @@
-def data = 'inizio'
 pipeline {
 
     parameters {
@@ -6,7 +5,11 @@ pipeline {
         booleanParam(name: 'autoApprove', defaultValue: true, description: 'Automatically run apply after generating plan?')
     }
 
-   agent  any
+    agent  any
+    enviorments{
+        data = 'inizio'
+    }
+
         options {
                 timestamps ()
             }
@@ -21,6 +24,7 @@ pipeline {
                     }
                 }
             }
+    
 
         stage('Plan') {
             steps {
