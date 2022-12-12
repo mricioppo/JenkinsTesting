@@ -6,7 +6,7 @@ pipeline {
     }
 
     agent  any
-    enviorments{
+    environment{
         data = 'inizio'
     }
 
